@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HANS-TECH_Ai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #f0f4ff, #d9e4ff);
+      --text: #000;
+      --user-bg: linear-gradient(135deg, #007bff, #0056b3);
+      --bot-bg: linear-gradient(135deg, #e2e2e2, #ccc);
+    }body.dark {
+  --bg: linear-gradient(135deg, #121212, #1f1f1f);
+  --text: #fff;
+  --user-bg: linear-gradient(135deg, #0a84ff, #005bbb);
+  --bot-bg: linear-gradient(135deg, #333, #444);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  perspective: 1000px;
+}
+
+header {
+  background: #111;
+  color: #fff;
+  padding: 15px;
+  font-size: 22px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.menu-btn {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  background: none;
+  color: white;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: absolute;
+  top: 45px;
+  right: 15px;
+  background: #222;
+  color: white;
+  border-radius: 10px;
+  padding: 12px;
+  display: none;
+  z-index: 10;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown button {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  width: 100%;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chat-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transform-style: preserve-3d;
+}
+
+.message-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.message {
+  padding: 14px 18px;
+  border-radius: 16px;
+  max-width: 80%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: rotateX(2deg) rotateY(2deg);
+  transition: transform 0.3s;
+}
+
+.message:hover {
+  transform: rotateX(0deg) rotateY(0deg) scale(1.02);
+}
+
+.user {
+  background: var(--user-bg);
+  color: white;
+  align-self: flex-end;
+}
+
+.bot {
+  background: var(--bot-bg);
+  color: var(--text);
+  align-self: flex-start;
+}
+
+.actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+  align-self: flex-start;
+}
+
+.actions button {
+  background: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.input-container {
+  display: flex;
+  padding: 12px;
+  border-top: 1px solid #ccc;
+  background: var(--bg);
+  box-shadow: inset 0 8px 12px -10px rgba(0,0,0,0.15);
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  background: white;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+button.send {
+  margin-left: 12px;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease;
+}
+
+button.send:hover {
+  transform: scale(1.05);
+}
+
+a {
+  color: #1a0dab;
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+<!-- Your existing JavaScript and HTML structure remains unchanged -->
+</body>
+</html>
